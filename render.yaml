@@ -1,0 +1,23 @@
+# render.yaml
+
+services:
+  - name: client
+    type: web
+    buildCommand: npm install && npm run build --prefix client
+    startCommand: npm run start --prefix client
+    workingDirectory: /opt/render/project
+
+  - name: server
+    type: web
+    buildCommand: npm install && npm run build --prefix server
+    startCommand: npm run start --prefix server
+    workingDirectory: /opt/render/project
+
+database:
+  - name: mongodb
+    type: mongodb
+    env:
+      - key: MONGODB_URI
+        fromDatabase:
+          name: your-database-name
+          property: connectionString
