@@ -85,7 +85,7 @@ export default function Login() {
           />
           <button type="submit">Log In</button>
           <span>
-            Don't have an account ? <Link to="/register" className="link">Sign up</Link>
+            Don't have an account 😱? <Link to="/register" className="link">Sign up 🥰</Link>
           </span>
         </form>
       </FormContainer>
